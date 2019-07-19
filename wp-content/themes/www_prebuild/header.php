@@ -42,7 +42,7 @@
                                                     <a href="https://collegeconnectors.customcollegeplan.com/" target="_new">
                                                         <div class="inlineblock studlogin">STUDENT PORTAL LOG IN</div>
                                                     </a>
-                                                    <a href="http://collegeconnectors.com/schedule-a-consultation.html">
+                                                    <a href="http://collegeconnectors.fasterproductions.com/schedule-a-consultation/">
                                                         <div class="inlineblock cta-btn">SCHEDULE A CONSULTATION</div>
                                                     </a>
                                                 </div>

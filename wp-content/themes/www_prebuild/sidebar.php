@@ -31,7 +31,7 @@
                         <div class="iframe-container">
                             <iframe src="https://www.youtube.com/embed/4vRchd9qwiw?rel=0" frameborder="0" allowfullscreen="" width="100%"></iframe>
                         </div>
-                        <a href="../our-success/videos.html">
+                        <a href="http://collegeconnectors.fasterproductions.com/our-successes/videos/">
                             <div class="cta-btn">See More of Our Success Videos &gt;&gt;</div>
                         </a>
                     </div>

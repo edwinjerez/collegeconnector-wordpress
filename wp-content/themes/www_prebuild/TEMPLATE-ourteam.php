@@ -73,67 +73,7 @@
                         </div>
                         <?php get_sidebar(); ?>
                     </div>
-                    <div id="dnn_FullPane_J" class="FullPaneJ spmodule">
-                        <div class="DnnModule DnnModule-DNN_HTML DnnModule-480">
-                            <a name="480"></a>
-                            <div id="dnn_ctr480_ContentPane" class="Default-Cont spd-container-text">
-                                <!-- Start_Module_480 -->
-                                <div id="dnn_ctr480_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
-                                    <div id="dnn_ctr480_HtmlModule_lblContent" class="Normal">
-                                        <div class="footer-tagline"><?php the_field('bottom_title'); ?></div>
-                                        <div class="footer-counter">
-                                            <div class="spd-row">
-                                            <?php 
-                                                if( get_field('cups_number') ):
-                                            ?>
-                                                <div class="spd-col-md-3 spd-col-sm-3 spd-xs-padding-bottom-50">
-                                                    <div class="counter-box"> <i class="fas fa-coffee fa-3x"></i> <span class="spd-counter mediumcount"><?php the_field('cups_number'); ?></span>
-                                                        <h4>cups of coffee consumed by College Connectors this year</h4> </div>
-                                                </div>
-                                                <div class="spd-col-md-3 spd-col-sm-3 spd-xs-padding-bottom-50">
-                                                    <div class="counter-box"> <i class="fas fa-map-marker-alt fa-3x"></i> <span class="spd-counter mediumcount"><?php the_field('full_year_college_number'); ?></span>
-                                                        <h4>four-year colleges in the US (degree-granting, nonprofit)</h4> </div>
-                                                </div>
-                                                <div class="spd-col-md-3 spd-col-sm-3 spd-xs-padding-bottom-50">
-                                                    <div class="counter-box"> <i class="fas fa-university fa-3x"></i> <span id="extratext">Over</span> <span class="spd-counter mediumcount"><?php the_field('private_college_number'); ?></span>
-                                                        <h4>private colleges charge at least $50,000</h4> </div>
-                                                </div>
-                                                <div class="spd-col-md-3 spd-col-sm-3 spd-xs-padding-bottom-50">
-                                                    <div class="counter-box"> <i class="fas fa-file-alt fa-3x"></i> <span id="extratext">Over</span> <span class="spd-counter mediumcount"><?php the_field('text_optional_colleges_number'); ?></span>
-                                                        <h4>colleges are test-optional or test-flexible</h4> </div>
-                                                </div>
-                                            <?php
-                                                endif;
-                                            ?>
-                                            <?php
-                                                if( get_field('states_number') ):
-                                            ?>
-                                                <div class="spd-col-md-3 spd-col-sm-3 spd-xs-padding-bottom-50">
-                                                    <div class="counter-box"> <i class="fas fa-map-marker-alt fa-3x"></i> <span class="spd-counter mediumcount"><?php the_field('states_number'); ?></span><span id="extratext">States</span>
-                                                        <h4>our students attend college all across the U.S.</h4> </div>
-                                                </div>
-                                                <div class="spd-col-md-3 spd-col-sm-3 spd-xs-padding-bottom-50">
-                                                    <div class="counter-box"> <i class="fa fa-graduation-cap fa-3x"></i> <span class="spd-counter mediumcount"><?php the_field('student_percentage'); ?></span><span class="counter-ex2">%</span>
-                                                        <h4>students put academic programs before cost & prestige</h4> </div>
-                                                </div>
-                                                <div class="spd-col-md-3 spd-col-sm-3 spd-xs-padding-bottom-50">
-                                                    <div class="counter-box"> <i class="fa fa-school fa-3x"></i> <span class="spd-counter mediumcount"><?php the_field('visit_number'); ?></span>
-                                                        <h4>college visits each year by our consultants</h4> </div>
-                                                </div>
-                                                <div class="spd-col-md-3 spd-col-sm-3 spd-xs-padding-bottom-50">
-                                                    <div class="counter-box"> <i class="fa fa-calendar-alt fa-3x"></i> <span class="spd-counter mediumcount"><?php the_field('experience_year_number'); ?></span>
-                                                        <h4>years of combined college counseling experience</h4> </div>
-                                                </div>
-                                            <?php
-                                                endif;
-                                            ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include_once('footer-top.php'); ?>
                 </main>
 
 
