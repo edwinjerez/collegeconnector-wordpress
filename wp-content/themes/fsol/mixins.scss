@@ -1,0 +1,31 @@
+//------------------------------------------------------------------------------o
+//                              [^FSOL_MIXINS]
+//------------------------------------------------------------------------------o
+
+@mixin margin_center ($top, $bottom){   
+  margin: $top auto $bottom auto;
+}
+
+@mixin border ($size, $color){
+  border: $size solid;
+  border-color: $color;
+}
+
+@mixin rounded ($tl, $tr, $br, $bl){
+  -webkit-border-radius: $tl $tr $br $bl;
+  border-radius: $tl $tr $br $bl;  
+}
+
+@mixin soft_inner_shadow ($color) {
+  -webkit-box-shadow: inset 1px 1px 20px 2px $color;
+  box-shadow: inset 1px 1px 20px 2px $color;
+}
+
+@mixin faux_columns ($columns, $spacing){
+  -moz-column-count: $columns;
+  -moz-column-gap: $spacing;
+  -webkit-column-count: $columns;
+  -webkit-column-gap: $spacing;
+  column-count: $columns;
+  column-gap: $spacing;  
+}

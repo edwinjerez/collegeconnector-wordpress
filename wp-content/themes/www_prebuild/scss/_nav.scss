@@ -1,0 +1,223 @@
+#mobile-nav-container {
+	display: none;
+	background-color: rgba(0,0,0,0.25);
+	height: 53px;
+	// background?
+	// background: transparent url(images/header-bg-fs.jpg) no-repeat center top;
+	// background-size: cover;
+	z-index: 111;
+	
+	@media all and (max-width:$tablet-width) {
+		display: block;
+	}
+}
+#mobile-nav-box {
+	display: none;
+	position: absolute;
+	top: 53px;
+	width: 100%;
+	border-bottom: 1px solid $black;
+}
+#mobile-nav-trigger { 
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0px;
+	width: 68px;	
+	height: 53px;
+	padding: 0 20px;
+	font: 16px/53px $copy-font;
+	color: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+	img {
+		display: inline-block;
+		position: relative;
+		top: 17px;
+		margin-right: 5px;
+	}
+}
+
+#mobile-logo {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.7);
+	
+	img {
+		height: 53px;
+		width: auto;
+	}
+}
+
+#mobile-nav {
+	background: $white;
+	
+	div {
+		ul {
+			width: 100%;
+			
+			li {
+				display: block;
+				
+				a {
+					display: block;
+					position: relative;
+					width: 100%;
+					padding: 5px 10px;
+					font: 16px/22px $copy-font;
+					color: $black;
+					text-decoration: none;
+					
+					&.mobile-back:before {
+						display: inline-block;
+						margin-right: 5px;
+						content: "\f0d9";
+						font: 16px/22px $icon-font;
+					}
+				}
+				
+				ul {
+					display: none;
+				}
+				
+				&.has-dropdown > a:after {
+					display: inline-block;
+					content: "\f0da";
+					font: 16px/22px $icon-font;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+#primary-nav {
+	position: absolute;
+	right: 0;
+	top: 46px;
+	
+	@media all and (max-width:1319px) {
+		right: 20px;
+	}
+	@media all and (max-width:$tablet-width) {
+		display: none;
+	}
+
+	div {
+		ul { // top level
+			li {
+				display: inline-block;
+				position: relative;
+				margin: 0 16px;
+				height: 85px;
+				
+				a {
+					display: block;
+					box-sizing: border-box;
+					position: relative;
+					font: 18px/18px $title-font;
+					padding: 12px 8px 6px;
+					color: $white;
+					text-decoration: none;
+					text-transform: none;
+					background-color: transparent;
+					border-bottom: 6px solid transparent;					
+				}
+				&.yellow-nav-button { 
+					margin: 0 0 0 18px;
+					
+					a {
+						background-color: $yellow-color;
+						color: $brown-color;
+						padding: 12px 20px 6px;
+						font: bold 18px/18px $copy-font;
+						letter-spacing: .5px;
+					}
+				}
+				
+				ul { // dropdown
+					display: none;
+					box-sizing: border-box;
+					position: absolute;
+					top: $primary-nav-box-height;
+					left: 0;
+					width: $dropdown-width;
+					border: 1px solid transparent;
+					background-color: #f8f8f8;
+					padding: 24px 0 20px;
+					
+					li {
+						display: block;
+						position: relative;
+						margin: 0;
+						height: auto;
+						
+						a {
+							font: 18px/18px $title-font;
+							padding: 6px 40px;
+							color: $brown-color;
+							background-color: transparent;
+							
+							@media all and (max-width:$site-width) {
+								padding: 6px 20px;
+							}
+						}
+						
+						ul { // dropdown flyout
+							top: -1px;
+							left: $dropdown-width - 2;
+							width: $dropdown-width;
+							
+							li {
+								a {
+								
+								}
+								
+								&:hover { // dropdown flyout hovers
+									& > a {
+									
+									}
+								}
+							}
+						}
+						
+						&:hover { // dropdown hovers
+							& > a {
+								color: $brown-color;
+								background-color: transparent;
+								border-bottom: 6px solid transparent;
+							}
+						}
+					}
+				}
+				
+				&:hover { // top level hovers
+					& > a {
+						color: $yellow-color;
+						background-color: transparent;
+						border-bottom: 6px solid $yellow-color;
+					}
+					&.yellow-nav-button > a {
+						color: $brown-color;
+						background-color: $yellow-color;
+						border-bottom: 6px solid transparent;
+					}
+					& > ul {
+						display: block;
+					}
+				}
+				&.yellow-nav-button > a:hover {
+					color: $yellow-color;
+					background-color: $brown-color;
+				}
+				
+			}
+		}
+	}
+}

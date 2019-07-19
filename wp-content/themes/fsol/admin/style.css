@@ -1,0 +1,44 @@
+/* 
+   Theme Name: Faster Solutions (FSOL)
+   Theme URI: http://www.fastersolutions.com
+   Author: Shane Smith (Faster Solutions)
+   Description: Admin Panel Base CSS 
+   Version: 0.1
+*/
+.wp-admin [for="wp_welcome_panel-hide"] {
+  display: none !important; }
+/*Client Setup Icon*/
+/*#adminmenu #toplevel_page_options-general-page-client_setup div.wp-menu-image{
+overflow:hidden;
+ background: url(images/card-address.png) no-repeat 6px -17px !important;
+}
+#adminmenu #toplevel_page_options-general-page-client_setup:hover div.wp-menu-image,#adminmenu #toplevel_page_options-general-page-client_setup.current div.wp-menu-image{
+ background-position:6px 7px!important;
+}*/
+#adminmenu #toplevel_page_admin-page-client_setup div.wp-menu-image{
+overflow:hidden;
+ background: url(images/card-address.png) no-repeat 6px -17px !important;
+}
+#adminmenu #toplevel_page_admin-page-client_setup:hover div.wp-menu-image,#adminmenu #toplevel_page_admin-page-client_setup.current div.wp-menu-image{
+ background-position:6px 7px!important;
+}
+/*Menu Icon*/
+#adminmenu #toplevel_page_nav-menus div.wp-menu-image{
+overflow:hidden;
+ background: url(images/ui-menu.png) no-repeat 6px -17px !important;
+}
+#adminmenu #toplevel_page_nav-menus:hover div.wp-menu-image,#adminmenu #toplevel_page_nav-menus.current div.wp-menu-image{
+ background-position:6px 7px!important;
+}
+/*Widgets Icon*/
+#adminmenu #toplevel_page_widgets div.wp-menu-image{
+overflow:hidden;
+ background: url(images/application-block.png) no-repeat 6px -17px !important;
+}
+#adminmenu #toplevel_page_widgets:hover div.wp-menu-image,#adminmenu #toplevel_page_widgets.current div.wp-menu-image{
+ background-position:6px 7px!important;
+}
+
+.ure-sidebar {
+ display: none;
+}

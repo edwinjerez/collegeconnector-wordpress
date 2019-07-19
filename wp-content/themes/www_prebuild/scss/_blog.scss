@@ -1,0 +1,127 @@
+#blog {
+	@include h1;
+}
+.blog-post-list {}
+.blog-post {
+	margin-bottom: 40px;
+	
+	.image {
+		@include img;
+
+		margin-bottom: 20px;		
+	}
+	.title {
+		@include h2;
+	}
+	.content {
+		@include content_area_styles;
+	}
+}
+.blog-pager {
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+	margin: 20px 0 40px;
+	padding: 15px 10px;
+	
+	.page-numbers {		
+		text-decoration: none;
+		color: $red;
+		font: 14px/18px $copy-font;
+		
+		&:hover {
+			color: $black;
+		}
+		
+		&.current {
+			color: $gray;
+		}
+		&.dots {
+			color: $gray;
+		}
+		&.prev {
+			float: left;
+			margin-right: 20px;
+		}
+		&.next {
+			float: right;
+			margin-left: 20px;
+		}
+	}
+}
+
+
+#comments {
+	h2 {
+
+	}
+	
+	.commentlist {
+		li {
+		
+			article {
+				.comment-author, .comment-meta {
+					cite, a, .says {
+
+					}
+				}
+				.reply {
+					margin-bottom: 10px;
+					
+					a {
+					
+						&:hover {
+
+						}
+					}
+				}
+			}
+			.children {
+				li {
+					display: block;
+					position: relative;
+					padding: 10px;
+					border: 0 none;
+					border-radius: 8px;
+					
+					.children {
+						li {
+							
+							.children {
+								li {
+									
+									.children {
+										li {
+
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#respond {
+		margin: 20px 0;
+		
+		h3 {
+
+		}
+		
+		#commentform {
+			label {
+				display: inline-block;
+				width: 100px;
+				margin-bottom: 10px;
+			}
+			input[type="text"], input[type="email"], textarea {
+				padding: 4px;
+				margin: 3px 0;
+			}
+			input[type="submit"] {
+				@include button_style;
+			}
+		}
+	}
+}

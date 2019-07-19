@@ -1,0 +1,47 @@
+#  FSOL WP Streamline theme
+
+## Changelog
+
+### v 0.0.6: 09/14/2012
+
+[############################################ 09/07/2012 ############################################]
+1) Starting off with Handcrafted theme: https://github.com/randyjensen/handcrafted-wp-theme
+2) Added /functions/custom.php and included into the main functions file.  This will help prevent clutter.
+3) Added SCSS optimization in folder /scss/styles.scss.  Set the main functions.php file to point to this as the primary.
+4) Created /admin directory to house all admin panel changes.
+5) Added phpconsole function - /functions.php
+6) Configured dashboard and menu item removal functions in /admin/functions.php.  Admin/Non-Admin differential
+
+[############################################ 09/08/2012 ############################################]
+1) function fsol_remove_inline_css_rc_widget_style() in /functions.php to remove inline css from the Recent Comments widget.  Prevents an unexpected style from showing up on the site.
+2) function fsol_customize_meta_boxes() in /admin/functions.php.  Allows to remove standard meta boxes from the post/page screens
+3) Moved $content_width global to functions/custom.php as this will be accessed frequently along with the fsol_custom_post_types() function.  Started to standardize documentation structure in the documents.
+4) Added various admin bar functions to /admin/functions.php and updated documentation commenting
+5) Added more default settings to the fsol_custom_post_types function in functions/custom.php
+6) Moved register_nav_menus call into the custom.php file and inclosed it in fsol_register_nav_menus() function
+7) Lots of cleanup between PHP function files.  Updating documentation.  Nothing of significance added.
+8) Added fsol_init_sessions() to /functions.php.  Initiates the ability to use $_SESSION
+9) Added get_tiny_url() and trim_string() to /functions/utilites.php
+
+[############################################ 09/09/2012 ############################################]
+1) Made some minor changes to various files.  Realized we should go with a parent/child theme setup for all the different configurations. We will have more control over updating the primary template and allow proper customization to child themes.  Going to refactor to move in this direction.
+2) Removed /scss directory and placed in root.
+3) Move functions in /functions/custom.php into /functions.php.  These functions will end up being overriden in the /setup.php file of the child themes.
+4) Updated primary stylesheet with normalize.css v2.0.1 and box model support.  List of @mixins under way.
+
+[############################################ 09/10/2012 ############################################]
+1) Determined would need a mixins.scss and style.css in the parent to properly accommodate child themes.
+2) Tested child theme and style sheet configuration is working correctly.
+3) Added google_font() function to /functions/utlities.php
+
+[############################################ 09/13/2012 ############################################]
+1) Created a "Client Setup" page under the "Settings" tab in the admin menu.  This allows for client detail information to be placed in the back-end.  This is generally useful for accessing data on the fly that can be changed.
+2) fsol_admin_menu() function added to /admin/functions.php.  Allows you to move sub items to main bar.
+3) fsol_admin_css() function added to /admin/functions.php.  Allows to specify a custom admin panel stylesheet.  Created default /admin/style.scss | /admin/style.css files.
+4) Added some more basic admin panel functions.  Did some cleanup across files.
+
+[############################################ 09/14/2012 ############################################]
+1) Standardized header.php / footer.php
+2) Added .clearfix and .ir (Image replace) settings to /style.css
+3) Added function to the /js/fsol.init.js file to add first-child / last-child classes to navigation items.
+4) Made adjustments to several files to accommodate child themes properly.

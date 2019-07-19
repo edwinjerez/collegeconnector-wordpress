@@ -1,0 +1,245 @@
+.timeline-event {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	
+	@media all and (max-width:$mobile-width) {
+		min-height: auto;
+	}
+	.left, .right {
+		position: relative;
+		box-sizing: border-box;
+		float: left;
+		
+		@media all and (max-width:$mobile-width) {
+			float: none;
+			clear: both;
+		}
+	}
+	.left {
+		width: 40%;
+		padding-right: 30px;
+		
+		@media all and (max-width:$mobile-width) {
+			width: 100%;
+			padding-right: 0;
+		}
+
+	}
+	.right {
+		width: 60%;
+		padding-left: 30px;
+		
+		@media all and (max-width:$mobile-width) {
+			width: 100%;
+			padding-left: 0;
+			border-left: 2px solid transparent;
+		}
+	}
+	
+	.image {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.title {
+
+	}
+	
+	.content {
+		float: none !important;
+		width: 100% !important;
+
+		ul {
+			list-style: disc outside none;
+			margin-left: 15px;
+		}
+		
+		p, li {
+		
+			a {
+				
+				&:hover {
+
+				}
+			}
+		}				
+	}
+}
+
+#timeline-box {
+	position: relative;
+	box-sizing: border-box;
+	
+	&.horizontal {
+		.timeline-event {
+			.left, .right {
+				height: 350px;
+				overflow: hidden;
+				
+			}
+			.right {
+				@media all and (max-width:$mobile-width) {
+					height: auto;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	&.vertical {
+		.timeline-event {
+			.image {
+				max-height: 200px;
+				overflow: hidden;
+			}
+			padding-bottom: 20px;
+		}
+		table {
+			border-collapse: separate;
+		}
+		tr {
+			@media all and (max-width:$mobile-width) {
+				width: 100%;
+				display: inline-block;
+			}
+		}
+		td:nth-child(2n), td:nth-child(2n+1) {
+			box-sizing: border-box;
+			position: relative;
+			//float: left;
+			width: 50%;
+			
+			@media all and (max-width:$mobile-width) {
+				width: 100%;
+				float: none;
+				clear: both;
+				display: inline-block;
+			}
+		}
+		
+		td:nth-child(2n+1) {
+			padding-right: 30px;
+			border-right: 1px solid $white;
+			
+			@media all and (max-width:$mobile-width) {
+				padding-right: 0;
+				border-right: 0 none;
+				border-left: 2px solid $white;
+				padding-left: 30px;
+			}
+			
+			&.connector:after {
+				content: "";
+				position: absolute;
+				top: 80px;
+				right: 0;
+				height: 2px;
+				width: 30px;
+				background: $white;
+				
+				@media all and (max-width:$mobile-width) {
+					//display: none;
+					right: auto;
+					left: 0;
+					top: 100px;
+				}
+			}
+		}
+		td:nth-child(2n) {
+			padding-left: 30px;
+			border-left: 1px solid $gray;
+			
+			@media all and (max-width:$mobile-width) {
+				//padding-left: 0;
+				//border-left: 0 none;
+				border-left: 2px solid $gray;
+			}
+
+			&.connector:after {
+				content: "";
+				position: absolute;
+				top: 160px;
+				left: 0;
+				height: 2px;
+				width: 30px;
+				background: $gray;
+				
+				@media all and (max-width:$mobile-width) {
+					//display: none;
+					top: 100px;
+				}
+			}
+		}
+		
+		tr.timeline-header {
+			td {
+				width: 100%;
+				padding-bottom: 30px; 
+				position: relative;
+				border-right: 1px transparent;
+				text-align: center;
+				
+				&:after {
+					display: block;
+					content: "";
+					width: 2px;
+					height: 30px;
+					position: absolute;
+					bottom: 0;
+					left: calc(50% - 1px);
+					background: $gray;
+					
+					@media all and (max-width:$mobile-width) {
+						display: none;
+					}
+				}
+			}
+		}
+		tr.timeline-footer {
+			td {
+				width: 100%;
+				padding-top: 30px;
+				position: relative;
+				border-right: 1px transparent;
+				text-align: center;
+				
+				&:after {
+					display: block;
+					content: "";
+					width: 2px;
+					height: 30px;
+					position: absolute;
+					top: 0;
+					left: calc(50% - 1px);
+					background: $gray;
+					
+					@media all and (max-width:$mobile-width) {
+						display: none;
+					}
+				}			
+			}
+		}
+	}
+}
+
+
+#timelinePager {
+	position: relative;
+	width: 100%;
+	padding: 20px 0;
+	left: 0;
+	top: 0;
+	
+	a {
+		display: block;
+		position: relative;
+		float: left;
+		padding: 0 10px;
+		text-decoration: none;
+		
+		&.cycle-pager-active {
+
+		}
+	}
+}

@@ -1,0 +1,40 @@
+#interior-rotator-container {}
+#interior-rotator {
+	position: relative;
+	border: 1px solid $gray;
+	width: 100%;
+	height: $interior-rotator-height;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: middle;
+	background-size: cover;
+}
+
+
+
+#main-container {}
+#main-box {
+	padding: 40px 0;
+}
+#main {
+	min-height: 600px; // you can remove this after testing
+	
+	& > .content {
+		@include content_area_styles;
+	}
+}
+
+
+
+#landing-container {}
+#landing-box {
+	padding: 40px 0;
+}
+#landing {
+	min-height: 600px; // you can remove this after testing
+	text-align: center;
+	
+	& > .content {
+		@include content_area_styles;
+	}
+}

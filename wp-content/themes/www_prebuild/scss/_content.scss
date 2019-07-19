@@ -1,0 +1,156 @@
+// raw content styles - use these if you want the style without the matching element
+// edit these mixins to style content!
+@mixin content_font {
+	font: 14px/18px $copy-font;
+}
+
+
+@mixin h1_raw {
+	font: 600 48px/1.2 $copy-font;
+	color: $black;
+	margin-bottom: 20px;
+}
+@mixin h2_raw {
+	font: 700 24px/1.2 $title-font;
+	color: $black;
+	margin-bottom: 15px;
+}
+@mixin h3_raw {
+	font: 700 20px/1.2 $copy-font;
+	color: $black;
+	margin-bottom: 10px;
+}
+@mixin h4_raw {
+	font: 700 18px/1.2 $title-font;
+	color: $black;
+	margin-bottom: 10px;
+}
+@mixin h5_raw {}
+@mixin h6_raw {}
+
+
+@mixin p_raw {
+	@include content_font;
+	color: $black;
+	margin-bottom: 15px;
+}
+@mixin a_raw {
+	font: inherit;
+	color: $red;
+	text-decoration: none;
+	
+	&:hover {
+		color: $black;
+	}
+}
+@mixin img_raw {
+	width: 100%;
+	height: auto;
+}
+@mixin ul_raw {
+	list-style: disc outside none;
+	margin-left: 35px;
+	margin-bottom: 15px;
+	
+	li {
+		@include content_font;
+		color: $black;
+	}
+}
+@mixin ol_raw {
+	list-style: decimal outside none;
+	margin-left: 35px;
+	margin-bottom: 15px;
+	
+	li {
+		@include content_font;
+		color: $black;
+	}
+}
+@mixin table_raw {
+	tr {
+		td {
+			a {
+			
+			}
+		}
+	}
+}
+
+@mixin iframe_raw {
+	width: 100%;
+	height: 300px;
+}
+
+
+
+@mixin content_button_raw {
+	display: inline-block;
+	color: $white !important;
+	background-color: $black;
+	
+	&:hover {
+		background-color: $gray;
+	}
+}
+
+
+
+// content area styles - use these if you're using the matching elements
+@mixin h1 {
+	h1 {@include h1_raw;}
+}
+@mixin h2 {
+	h2 {@include h2_raw;}
+}
+@mixin h3 {
+	h3 {@include h3_raw;}
+}
+@mixin h4 {
+	h4 {@include h4_raw;}
+}
+@mixin h5 {
+	h5 {@include h5_raw;}
+}
+@mixin h6 {
+	h6 {@include h6_raw;}
+}
+@mixin p {
+	p {@include p_raw;}
+}
+@mixin a {
+	a {@include a_raw;&.content-button {@include content_button_raw;}}
+}
+@mixin img {
+	img {@include img_raw;}
+}	
+@mixin ul {
+	ul {@include ul_raw;}
+}
+@mixin ol {
+	ol {@include ol_raw;}
+}	
+@mixin table {
+	table {@include table_raw;}
+}
+@mixin iframe {
+	iframe {@include iframe_raw;}
+}
+
+
+// use this with general content areas
+@mixin content_area_styles {
+	@include h1;
+	@include h2;
+	@include h3;
+	@include h4;
+	@include h5;
+	@include h6;
+	@include p;
+	@include a;
+	@include img;
+	@include ul;
+	@include ol;
+	@include table;
+	@include iframe;
+}

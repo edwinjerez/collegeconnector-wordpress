@@ -1,0 +1,590 @@
+#fullscreen-box {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	
+	#fs-photo-gallery {
+		display: block;
+		position: relative;
+		width: 100%;
+		padding-bottom: 20px;
+		
+		.gallery-chooser {
+			width: 100%;
+			z-index: 101;
+			
+			select {
+				margin-left: 10px;
+			}
+
+			
+			#fullscreen-switch {
+				text-decoration: none;
+				position: absolute;
+				right: 20px;
+				z-index: 101;
+				
+				span:after {
+					content: '\f065';
+					font-family: $icon-font;
+					font-size: 24px;
+					height: 24px;
+					width: 24px;
+					
+				}
+			}
+		}
+		#gallery-rotator {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 500px;
+		}
+		
+		.gallery-controls {
+			position: relative;
+			width: 200px;
+			height: 30px;
+			margin-left: calc(50% - 100px);
+			margin-top: 10px;
+			z-index: 101;
+			
+			.prev, .next {
+				display: block;
+				position: absolute;
+				top: 0;
+				width: 30px;
+				height: 30px;
+				text-align: center;
+				
+				a {
+					font-family: $icon-font;
+					text-decoration: none;
+				}
+			}
+			.prev {
+				left: 0;
+			}
+			.next {
+				right: 0;
+			}
+			.counter {
+				text-align: center;
+			}
+		}
+		.basic-gallery-controls {
+			position: relative;
+			width: 100%;
+			padding-top: 10px;
+			
+			.prev, .next {
+				display: block;
+				position: relative;
+				float: left;
+				width: calc(50% - 50px);
+				
+				a {
+					font-family: $icon-font;
+					text-decoration: none;
+					font-size: 30px;
+					
+					&:hover {
+
+					}
+				}
+			}
+			.prev {
+				text-align: right;
+			}
+			.counter {
+				display: block;
+				position: relative;
+				float: left;
+				width: 100px;
+				text-align: center;
+				font: 600 18px/30px $copy-font;
+			}
+		}
+		
+		.gallery-pager {
+			margin: 10px auto;
+			z-index: 200;
+			text-align: center;
+			
+			img {
+				display: inline-block;
+				position: relative;
+				width: calc(10% - 10px);
+				margin: 5px;
+				height: auto;
+				box-sizing: border-box;
+				
+				&.cycle-pager-active {
+
+				}
+			}
+			
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+		}
+	}
+
+	&:fullscreen {
+		#fs-photo-gallery {
+			width: 100vw;
+			height: 100vh;
+			background: $black;
+
+			.gallery-chooser {
+				position: absolute;
+				top: 10px;
+				left: 0px;
+
+				#fullscreen-switch span:after {
+					content: '\f066';
+					color: $white;
+				}
+			}
+			
+			#gallery-rotator {
+				height: 100%;
+				margin: 0 auto;
+
+				div {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+			.gallery-controls {
+				position: absolute;
+				width: 100%;
+				top: 50%;
+				margin-left: 0;
+				
+				.prev, .next {
+					a {
+						color: $white !important;
+						font-size: 60px;
+					}
+				}
+				.counter {
+					position: fixed;
+					top: 0;
+					width: 100px;
+					left: calc(50% - 50px);
+					text-align: center;
+					color: $white !important;
+				}
+			}
+			
+			.gallery-pager {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				
+				img {
+					width: 4.5%;
+					margin: 0 0.25%;
+				}
+			}
+		}
+	}
+	
+	&:full-screen {
+		#fs-photo-gallery {
+			width: 100vw;
+			height: 100vh;
+			background: $black;
+
+			.gallery-chooser {
+				position: absolute;
+				top: 10px;
+				left: 0;
+
+				#fullscreen-switch span:after {
+					content: '\f066';
+					color: $white;
+				}
+			}
+			
+			#gallery-rotator {
+				height: 100%;
+				margin: 0 auto;
+
+				div {
+					width: 100% !important;
+					
+					img {
+						width: 100% !important;
+						height: auto !important;
+					}
+				}
+			}
+			.gallery-controls {
+				position: absolute;
+				width: 100%;
+				top: 50%;
+				margin-left: 0;
+				
+				.prev, .next {
+					a {
+						color: $white !important;
+						font-size: 60px;
+					}
+				}
+				.counter {
+					position: fixed;
+					top: 0;
+					width: 100px;
+					left: calc(50% - 50px);
+					text-align: center;
+					color: $white !important;
+				}
+			}
+			
+			.gallery-pager {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				
+				img {
+					width: 4.5%;
+					margin: 0 0.25%;
+				}
+			}
+		}
+	}
+	&:-ms-fullscreen {
+		#fs-photo-gallery {
+			width: 100vw;
+			height: 100vh;
+			background: $black;
+
+			.gallery-chooser {
+				position: absolute;
+				top: 10px;
+				left: 0;
+
+				#fullscreen-switch span:after {
+					content: '\f066';
+					color: $white;
+				}
+			}
+			
+			#gallery-rotator {
+				height: 100%;
+				margin: 0 auto;
+
+				div {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+			.gallery-controls {
+				position: absolute;
+				width: 100%;
+				top: 50%;
+				margin-left: 0;
+				
+				.prev, .next {
+					a {
+						color: $white !important;
+						font-size: 60px;
+					}
+				}
+				.counter {
+					position: fixed;
+					top: 0;
+					width: 100px;
+					left: calc(50% - 50px);
+					text-align: center;
+					color: $white !important;
+				}
+			}
+			
+			.gallery-pager {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				
+				img {
+					width: 4.5%;
+					margin: 0 0.25%;
+				}
+			}
+		}
+	}
+	&:-webkit-full-screen {
+		#fs-photo-gallery {
+			width: 100vw;
+			height: 100vh;
+			background: $black;
+
+			.gallery-chooser {
+				position: absolute;
+				top: 10px;
+				left: 0;
+
+				#fullscreen-switch span:after {
+					content: '\f066';
+					color: $white;
+				}
+			}
+			
+			#gallery-rotator {
+				height: 100%;
+				margin: 0 auto;
+
+				div {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+			.gallery-controls {
+				position: absolute;
+				width: 100%;
+				top: 50%;
+				margin-left: 0;
+				
+				.prev, .next {
+					a {
+						color: $white !important;
+						font-size: 60px;
+					}
+				}
+				.counter {
+					position: fixed;
+					top: 0;
+					width: 100px;
+					left: calc(50% - 50px);
+					text-align: center;
+					color: $white !important;
+				}
+			}
+			
+			.gallery-pager {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				
+				img {
+					width: 4.5%;
+					margin: 0 0.25%;
+				}
+			}
+		}
+	}
+	&:-moz-full-screen {
+		#fs-photo-gallery {
+			width: 100vw;
+			height: 100vh;
+			background: $black;
+
+			.gallery-chooser {
+				position: absolute;
+				top: 10px;
+				left: 0;
+
+				#fullscreen-switch {
+					span:after {
+						content: '\f066';
+						color: $white;
+					}
+				}
+			}
+			
+			#gallery-rotator {
+				height: 100%;
+				margin: 0 auto;
+
+				div {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+			.gallery-controls {
+				position: absolute;
+				width: 100%;
+				top: 50%;
+				margin-left: 0;
+				
+				.prev, .next {
+					a {
+						color: $white !important;
+						font-size: 60px;
+					}
+				}
+				.counter {
+					position: fixed;
+					top: 0;
+					width: 100px;
+					left: calc(50% - 50px);
+					text-align: center;
+					color: $white !important;
+				}
+			}
+			
+			.gallery-pager {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				
+				img {
+					width: 4.5%;
+					margin: 0 0.25%;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+#portfolio-chooser {
+	width: 100%;
+	text-align: center;
+	
+	ul {
+		li {
+			display: inline-block;
+			
+			a {
+				text-decoration: none;
+				padding-right: 15px;
+				border-right: 1px solid $gray;
+				margin-right: 15px;
+				
+				&.active {
+
+				}
+			}
+			
+			&:last-child > a {
+				border-right: 0 none;
+			}
+		}
+	}
+}
+#portfolio-gallery {
+	width: 100%;
+	margin: 20px auto;
+	box-sizing: border-box;
+	position: relative;
+}
+// basic portfolio slide
+.portfolio-slide {
+	width: 33.333%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+	
+	@media all and (max-width:800px) {
+		width: 100%;
+		float: none;
+		clear: both;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	.image {
+		max-height: 239px;
+		overflow: hidden;
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.title {
+		padding-top: 10px;
+		text-decoration: none;
+	}
+	
+	&:hover > a {
+
+	}
+}
+
+
+// extended portfolio slide
+.portfolio-gallery-slide {
+	position: relative;
+	box-sizing: border-box;
+	width: calc(25% - 20px);
+	height: 195px;
+	margin: 10px;
+	float: left;
+	
+	
+	@media all and (max-width:$site-width) {
+		width: calc(33.333% - 20px);
+	}
+	@media all and (max-width:800px) {
+		width: calc(50% - 20px);
+	}
+	@media all and (max-width:480px) {
+		width: calc(100% - 20px);
+	}
+	
+	a {
+		text-decoration: none;
+		display: block;
+		color: $black;
+		
+		.backdrop {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			filter: grayscale(0);
+			transition: filter 0.1s linear;
+		}
+		
+		.overlay {
+			display: none;
+			color: $white;
+			text-align: right;
+			font: 16px/20px $copy-font;
+			background: rgba(0,0,0,0.6);
+			bottom: 0;
+			position: absolute;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 10px 15px;
+			
+			h4 {
+				font-weight: normal;
+			}
+		}
+
+		&:hover {
+			& > .backdrop {
+				filter: grayscale(100%);	
+			}
+			& > .overlay {
+				display: block;
+			}
+		}
+	}
+	
+}

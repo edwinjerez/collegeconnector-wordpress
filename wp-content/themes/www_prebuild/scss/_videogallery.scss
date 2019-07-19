@@ -1,0 +1,50 @@
+#videoGalleryContainer {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+}
+.videoGalleryCol {
+	position: relative;
+	box-sizing: border-box;
+	width: 33.333%;
+	float: left;
+	
+	@media all and (max-width:600px) {
+		width: 100%;
+		float: none;
+		clear: both;
+	}
+}
+.videoGallerySlide, .videoGalleryColSlide {
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	width: 33.333%;
+	padding: 0 15px;
+	margin-bottom: 20px;
+	float: left;
+	
+	@media all and (max-width:600px) {
+		width: 100%;
+		float: none;
+		clear: both;
+	}
+	
+	.video {
+		iframe {
+			width: 100%;
+			height: 300px;
+		}
+	}
+	.title {
+
+	}
+	.caption {
+
+	}
+}
+.videoGalleryColSlide {
+	width: 100%;
+	float: none;
+	clear: both;
+}

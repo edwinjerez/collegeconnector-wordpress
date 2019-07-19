@@ -1,0 +1,45 @@
+.wpcf7-form {
+	label {
+		margin-bottom: 5px;
+	}
+	.reqd {
+		color: $red;
+	}
+	p {
+		margin-bottom: 5px !important;
+	}
+	input[type="text"],input[type="email"], textarea {
+		box-sizing: border-box;
+		padding: 16px 15px !important;
+		margin: 5px 0;
+		background-color: $white;
+		border: 1px solid $gray;
+		font: 12px/12px $copy-font;
+		color: $black;
+		width: 100%;
+		
+		@media all and (max-width:$site-width) {
+			max-width: 96%;
+			margin-left: 1%;
+		}
+	}
+	input[type="submit"] {
+		padding: 14px 17px;
+		color: $white;
+		background-color: $red;
+		text-transform: uppercase;
+		font: 300 14px/14px $title-font;
+		border: 0 none;
+		margin: 10px 0;
+		
+		&:hover {
+			color: $black;
+		}
+	}
+	.wpcf7-mail-sent-ok {
+		display: none !important;
+	}
+	.wpcf7-list-item {
+		display: block;
+	}
+}

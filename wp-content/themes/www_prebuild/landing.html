@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!-- c:
+	Notes on use - Sistance 7/30/2017
+	
+	READ THE README.txt!!!!!!!!
+-->
+<!-- start header -->
+<html>
+	<head>
+		<meta charset="<!-- php:bloginfo( 'charset' ); -->" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<title><!-- f:remove BUILD TEST TITLE -->TEST TITLE<!-- f:endremove --><!-- php:
+			global $page, $paged;
+			wp_title( '|', true, 'right' );
+			if ( $paged >= 2 || $page >= 2 ) {
+				echo ' | ' . sprintf( __( 'Page %s', 'fsol' ), max( $paged, $page ) );
+			}
+		--></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/favicon.png" />
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+		<!-- php:if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); -->
+		<link rel="pingback" href="<!-- php:bloginfo( 'pingback_url' ); -->" />
+
+		<!-- f:remove BUILD TEST ENQUEUES -->
+		<link rel="stylesheet" href="font-awesome.min.css" />
+		<link rel="stylesheet" href="foundation.min.css" />
+		<link rel="stylesheet" href="interior-styles.css" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript" src="http://fasterproductions.com/fsol/scripts/jquery.cookie.js"></script>
+		<script type="text/javascript" src="http://fasterproductions.com/fsol/scripts/jquery.cycle2.min.js"></script>
+		<script type="text/javascript" src="http://fasterproductions.com/fsol/scripts/jquery.fullscreen.js"></script>
+		<script type="text/javascript" src="http://fasterproductions.com/fsol/scripts/fs.tiered_gallery.js"></script>
+		<script type="text/javascript" src="http://fasterproductions.com/fsol/scripts/fs.paged_gallery.js"></script>
+		<script type="text/javascript" src="http://fasterproductions.com/fsol/scripts/fs.smoothscroll.js"></script>	
+		<script type="text/javascript" src="scripts/foundation.min.js"></script>	
+		<script type="text/javascript" src="http://fasterproductions.com/fsol/scripts/init.js"></script>
+		<script type="text/javascript" src="scripts/scripts.js"></script>
+		<!-- f:endremove -->
+		
+		<!-- php:wp_head(); -->
+		<!-- php:include("includes/analytics.php"); -->
+		<!-- area for extra script import -->
+		<!-- php:echo get_option('fsol_head_script'); -->
+	</head>
+	
+	<body class="home">
+		<!-- php:include("includes/wp-filters.php"); -->
+		<div id="mobile-nav-container" class="container">
+			<a href="#" id="mobile-nav-trigger"><img src="images/mobile-menu-trigger-fs.png"> Menu</a>
+			<div id="mobile-phone">
+				<a href="tel:<!-- php:get_option('fsol_client_phone'); -->"><!-- f:remove PLACEHOLDER -->(218) 733-3936<!-- f:endremove --><!-- php:format_phone(get_option('fsol_client_phone')); --></a>
+			</div>			
+			<div id="mobile-nav-box">
+				<nav id="mobile-nav">
+					<!-- php:wp_nav_menu(array('theme_location'=>'mobile')); -->
+					<!-- f:remove BUILD TEST MOBILE NAV -->
+					<div>
+						<ul>
+							<li><a href="#1">Item 1</a></li>
+							<li><a href="#2">Item 2</a><ul>
+								<li><a href="#2.1">Item 2.1</a></li>
+								<li><a href="#2.2">Item 2.2</a></li>
+							</ul></li>
+							<li><a href="#3">Item 3</a><ul>
+								<li><a href="#3.1">Item 3.1</a></li>
+								<li><a href="#3.2">Item 3.2</a><ul>
+									<li><a href="#3.2.1">Item 3.2.1</a></li>
+									<li><a href="#3.2.2">Item 3.2.2</a></li>
+								</ul></li>
+							</ul></li>
+							<li><a href="#">Item 4</a><ul>
+								<li><a href="#4.1">Item 4.1</a></li>
+							</ul></li>
+						</ul>
+					</div>
+					<!-- f:endremove -->
+				</nav>
+			</div>
+		</div>
+		<header id="header-container" class="container">
+			<div id="header-box" class="row">
+				<div id="site-logo">
+					<a href="/"><img src="images/siteLogo-cs.png"></a>
+				</div>
+				<nav id="secondary-nav">
+					<!-- php:wp_nav_menu(array('theme_location'=>'utility')); -->
+					<!-- f:remove BUILD TEST SECONDARY NAV -->
+					<div>
+						<ul>
+							<li><a href="#">Item 1</a></li>
+							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Item 3</a></li>
+							<li class="search-trigger"><a href="#"><img src="images/search-trigger-fs.png"></a></li>
+						</ul>
+					</div>
+					<!-- f:endremove -->
+				</nav>
+				<div id="search-box">
+					<form id="searchform" name="searchform" action="/" method="GET">
+						<input type="text" name="s" id="s"><button type="submit"><img src="images/search-trigger-fs.png"></button>
+					</form>
+				</div>
+				<div id="header-phone">
+					<a href="tel:<!-- php:get_option('fsol_client_phone'); -->"><!-- f:remove PLACEHOLDER -->(218) 733-3936<!-- f:endremove --><!-- php:format_phone(get_option('fsol_client_phone')); --></a>
+				</div>
+			</div>
+		</header>
+		<div id="primary-nav-container" class="container">
+			<div id="primary-nav-box" class="row">
+				<nav id="primary-nav">
+					<!-- php:wp_nav_menu(array('theme_location'=>'primary')); -->
+					<!-- f:remove BUILD TEST NAV -->
+					<div>
+						<ul>
+							<li><a href="#1">Item 1</a></li>
+							<li><a href="#2">Item 2</a><ul>
+								<li><a href="#2.1">Item 2.1</a></li>
+								<li><a href="#2.2">Item 2.2</a></li>
+							</ul></li>
+							<li><a href="#3">Item 3</a><ul>
+								<li><a href="#3.1">Item 3.1</a></li>
+								<li><a href="#3.2">Item 3.2</a><ul>
+									<li><a href="#3.2.1">Item 3.2.1</a></li>
+									<li><a href="#3.2.2">Item 3.2.2</a></li>
+								</ul></li>
+							</ul></li>
+							<li><a href="#">Item 4</a><ul>
+								<li><a href="#4.1">Item 4.1</a></li>
+							</ul></li>
+						</ul>
+					</div>
+					<!-- f:endremove -->
+				</nav>
+			</div>
+		</div>
+<!-- end header -->
+
+
+
+<!-- start landing page -->
+		<!-- php:get_header(); -->
+		<!-- php:the_post(); -->
+		
+		<section id="interior-rotator-container" class="container">
+			<div id="interior-rotator" style="background-image: url('<!-- e:$image; --><!-- f:remove -->images/<!-- f:endremove -->');">
+				&nbsp;
+			</div>
+		</section>
+
+		<section id="landing-container" class="container">
+			<div id="landing-box" class="row">
+				<!-- c:landing content goes here -->
+
+				<article id="landing" class="small-10 small-offset-1 columns">
+					<div class="content">
+						<!-- f:remove LANDING PAGE CONTENT GOES HERE -->
+						<h1>Landing Page Title</h1>
+						<!-- f:endremove -->
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<!-- php:get_footer(); -->
+<!-- end landing page -->
+
+
+
+<!-- start footer -->
+		<footer id="footer-container" class="container">
+			<div id="footer-box" class="row">
+				<div id="footer-logo">
+					<a href="/"><img src="images/siteLogo-cs.png"></a>
+				</div>
+				<nav id="footer-nav">
+					<!-- php:wp_nav_menu(array('theme_location'=>'footer')); -->
+					<!-- f:remove BUILD TEST NAV -->
+					<div>
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+						</ul>
+					</div>
+					<!-- f:endremove -->
+				</nav>
+				<nav id="footer-social">
+					<div>
+						<ul>
+							<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+						</ul>
+					</div>
+				</nav>
+				<div id="footer-signup">
+					<p>Sign Up</p>
+					<form name="email-signup" action="" method="POST" class="clearfix">
+						<input type="text" name="email" placeholder="Email"><button type="submit">Sign Up</button>
+					</form>
+				</div>
+				<div id="footer-info">
+					<p>Copyright &copy; <!-- f:remove PLACEHOLDER -->2017<!-- f:endremove --><!-- e:=date('Y'); --><span class="hideSPAN">&nbsp;&nbsp;|&nbsp;&nbsp;</span><br class="showBR"><!-- f:remove PLACEHOLDER -->Company Name, Inc.<!-- f:endremove --><!-- php:get_option('fsol_client_company_name'); --></p>
+				</div>
+				<div id="footer-byline">
+					<p>Website by <a href="http://fastersolutions.com" target="_blank">Faster Solutions Inc</a></p>
+				</div>
+			</div>
+		</footer>
+		<!-- php:wp_footer(); -->
+	</body>
+</html>
+<!-- end footer -->

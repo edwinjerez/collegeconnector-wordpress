@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:500,600,700|Slabo+27px&display=swap");
+body#tinymce.wp-editor {
+  margin: 10px; }
+  body#tinymce.wp-editor h1 {
+    font: 600 48px/1.2 "Raleway", sans-serif;
+    color: #202020;
+    margin-bottom: 20px; }
+  body#tinymce.wp-editor h2 {
+    font: 700 24px/1.2 "Slabo 27px", sans-serif;
+    color: #202020;
+    margin-bottom: 15px; }
+  body#tinymce.wp-editor h3 {
+    font: 700 20px/1.2 "Raleway", sans-serif;
+    color: #202020;
+    margin-bottom: 10px; }
+  body#tinymce.wp-editor h4 {
+    font: 700 18px/1.2 "Slabo 27px", sans-serif;
+    color: #202020;
+    margin-bottom: 10px; }
+  body#tinymce.wp-editor p {
+    font: 14px/18px "Raleway", sans-serif;
+    color: #202020;
+    margin-bottom: 15px; }
+  body#tinymce.wp-editor a {
+    font: inherit;
+    color: #c00000;
+    text-decoration: none; }
+    body#tinymce.wp-editor a:hover {
+      color: #202020; }
+    body#tinymce.wp-editor a.content-button {
+      display: inline-block;
+      color: #fff !important;
+      background-color: #202020; }
+      body#tinymce.wp-editor a.content-button:hover {
+        background-color: #808080; }
+  body#tinymce.wp-editor img {
+    width: 100%;
+    height: auto; }
+  body#tinymce.wp-editor ul {
+    list-style: disc outside none;
+    margin-left: 35px;
+    margin-bottom: 15px; }
+    body#tinymce.wp-editor ul li {
+      font: 14px/18px "Raleway", sans-serif;
+      color: #202020; }
+  body#tinymce.wp-editor ol {
+    list-style: decimal outside none;
+    margin-left: 35px;
+    margin-bottom: 15px; }
+    body#tinymce.wp-editor ol li {
+      font: 14px/18px "Raleway", sans-serif;
+      color: #202020; }
+  body#tinymce.wp-editor iframe {
+    width: 100%;
+    height: 300px; }
+
+/*# sourceMappingURL=tinymce-styles.css.map */

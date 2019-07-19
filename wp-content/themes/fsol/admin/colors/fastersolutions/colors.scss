@@ -1,0 +1,63 @@
+$base-color: #e8e8e8; // light gray
+$highlight-color: #96ca2d; // green
+$notification-color: #96ca2d; // green
+$action-color: #96ca2d; // green
+
+$body-background: #f1f1f1;
+$text-color: #202020; // dk gray
+$icon-color: #606060; // mid gray
+$link: darken($highlight-color,10%); // darker green
+
+$menu-highlight-text: #fff; // white
+$menu-highlight-icon: #fff; // white
+$menu-submenu-background: #fff; // white
+$menu-submenu-focus-text: darken($highlight-color,10%); // darker green
+$menu-bubble-text: #fff; // white
+
+$adminbar-input-background: #f00; // red
+//$menu-submenu-background: #f00;
+//$menu-collapse-text: #f00;
+
+@import "../admin";
+
+
+
+// metabox title bar
+.ui-sortable-handle {
+	background: #96ca2d; // green
+	
+	span {
+		color: #fff;
+	}
+}
+// metabox toggle indicator
+.toggle-indicator {
+	color: #fff;
+}
+
+// metabox borders/shadows
+.postbox {
+	border: 0 none;
+	box-shadow: none;
+}
+
+// MarketPress dashboard
+.mp-dashboard-stock-orders-title {
+	color: #96ca2d !important; // green
+}
+
+// admin bar background
+#wpadminbar { 
+	background: #fff; // white
+	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+}
+// admin bar icons
+#wpadminbar:not(.mobile) .quicklinks li:hover .ab-item::before,
+#wpadminbar:not(.mobile) .quicklinks li:hover .ab-item .ab-icon::before {
+	color: #96ca2d !important;
+}
+
+// notice
+.notice {
+	background-color: #e8e8e8;
+}

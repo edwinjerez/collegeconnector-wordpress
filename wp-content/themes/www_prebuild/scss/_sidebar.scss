@@ -1,0 +1,10 @@
+#sidebar {
+	.widget {
+		position: relative;
+		
+		@include h4;
+		@include p;
+		@include a;
+		@include ul;
+	}
+}

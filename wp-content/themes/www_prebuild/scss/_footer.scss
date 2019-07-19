@@ -1,0 +1,225 @@
+#footer-container {
+	// background?
+	// background: transparent url(images/header-bg-fs.jpg) no-repeat center top;
+	// background-size: cover;
+	z-index: 110;
+}
+
+
+#footer-top-bar {
+	height: 45px;
+	width: 100%;
+	background: transparent url(images/footer-top-bar-fs.jpg) repeat-x top left;
+	
+	@media all and (max-width:$mobile-width) {
+		height: 8px;
+		background: transparent url(images/footer-top-bar-mobile-fs.jpg) repeat-x top left;
+	}
+}
+#footer-bottom {
+	background-color: $brown-color;
+}
+#footer-bottom-bar {
+	height: 8px;
+	width: 100%;
+	background: transparent url(images/footer-bottom-bar-fs.jpg) repeat-x top left;
+}
+#footer-box {
+	height: 152px;
+	
+	@media all and (max-width:$mobile-width) {
+		height: auto;
+		padding: 40px 0;
+	}
+}
+#footer-logo {
+	position: absolute;
+	top: 32px;
+	left: -5px;
+	
+	@media all and (max-width:$mobile-width) {
+		display: none;
+	}
+	
+	img {
+		max-width: 160px;
+		height: auto;
+	}
+}
+#footer-nav {
+	position: absolute;
+	top: 39px;
+	left: 16.667%;
+	width: 66.667%;
+	
+	@media all and (max-width:$mobile-width) {
+		position: relative;
+		top: 0;
+		left: 0;
+		text-align: center;
+		margin-bottom: 30px;
+		width: 100%;
+	}
+	
+	div {
+		ul {
+			display: inline-block;
+			
+			@media all and (max-width:1099px) {
+				display: block;
+			}
+			
+			
+			li {
+				display: inline-block;
+				margin-right: 10px;
+				font: 18px/22px $title-font;
+				color: $sage-color;
+				
+				@media all and (max-width:479px) {
+					font: 13px/20px $title-font;
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+				
+				a {
+					font: inherit;
+					text-decoration: none;
+					color: $sage-color;
+				}
+				
+				&.footer-phone > a, &.footer-email > a {
+					color: $yellow-color;
+				}
+
+				&.separator.last {
+					@media all and (max-width:1099px) {
+						display: none;
+					}
+				}
+
+
+				
+				&:hover {
+					& > a {
+						color: $yellow-color;
+					}				
+					&.footer-phone > a, &.footer-email > a {
+						color: $sage-color;
+					}
+				}
+			}
+		}
+	}
+}
+#footer-social {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	
+	@media all and (max-width:$site-width) {
+		right: 20px;
+	}
+	@media all and (max-width:$mobile-width) {
+		position: relative;
+		top: 0;
+		left: 0;
+		text-align: center;
+		margin-bottom: 30px;
+		right: auto;
+	}
+	
+	div {
+		ul {
+			li {
+				display: inline-block;
+				margin-left: 10px;
+				
+				@media all and (max-width:$mobile-width) {
+					margin: 0 5px;
+				}
+				
+				a {
+					font-size: 30px;
+					line-height: 30px;
+					color: $sage-color;
+					
+					&:hover {
+						color: $yellow-color;
+					}
+					
+					@media all and (max-width:479px) {
+						font-size: 20px;
+					}
+					
+					.aria-hidden {
+						display: none;
+					}
+					
+					i {
+						display: inline-block;
+						margin-top: 6px;
+						margin-right: 10px;
+					}
+				}
+				
+				&.footer-give-button {
+					a {
+						display: block;
+						text-decoration: none;
+						width: auto;
+						font: bold 20px/20px $copy-font;
+						color: $brown-color;
+						padding: 13px 27px;
+						background: $yellow-color;
+						
+						@media all and (max-width:479px) {
+							font: bold 14px/14px $copy-font;
+							padding: 8px 18px;
+						}
+						
+						&:hover {
+							color: $yellow-color;
+							background-color: $brown-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#footer-info {
+	position: absolute;
+	top: 78px;
+	left: 16.667%;
+	width: 66.667%;
+	font: 13px/16px $copy-font;
+	color: $white;
+	
+	@media all and (max-width:1099px) {
+		top: 94px;
+		width: 80%;
+	}
+	@media all and (max-width:$mobile-width) {
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		text-align: center;
+		right: auto;
+	}
+	@media all and (max-width:479px) {
+		font: 10px/14px $copy-font;
+	}
+	a {
+		font: inherit;
+		color: inherit;
+		text-decoration: none;
+		
+		&:hover {
+			color: $sage-color;
+		}
+	}
+}
+
