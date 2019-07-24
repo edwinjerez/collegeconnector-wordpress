@@ -385,7 +385,7 @@ function wp_custom_archive($args = '')
         'format' => 'html',
         'before' => '',
         'after' => '',
-        'show_post_count' => false,
+        'show_post_count' => true,
         'echo' => 1
     );
     
@@ -417,7 +417,7 @@ function wp_custom_archive($args = '')
     $where = apply_filters('customarchives_where', "WHERE post_type = 'post' AND post_status = 'publish'", $r);
     $join  = apply_filters('customarchives_join', "", $r);
     
-    $output = '<ul>';
+    $output = '<div class="widget-accordion-group">';
     
     $query = "SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM $wpdb->posts $join $where GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC $limit";
     $key   = md5($query);
@@ -432,10 +432,13 @@ function wp_custom_archive($args = '')
     if ($arcresults) {
         $afterafter = $after;
         foreach ((array) $arcresults as $arcresult) {
-            $url       = get_month_link($arcresult->year, $arcresult->month);
+            // $url       = get_month_link($arcresult->year, $arcresult->month);
+            $url       = get_permalink( get_page_by_title( 'Blog' )) . '/?year='.$arcresult->year.'&month='.$arcresult->month;
             /* translators: 1: month name, 2: 4-digit year */
-            $text      = sprintf(__('%s'), $wp_locale->get_month($arcresult->month));
-            $year_text = sprintf('<li>%d</li>', $arcresult->year);
+            $text      = sprintf(__('%s %d'), $wp_locale->get_month($arcresult->month), $arcresult->year);
+            // sprintf($text);
+            $year_text = '<div class="widget-accordion-heading"><a class="widget-accordion-toggle" data-toggle="collapse" title="Click to toggle monthly archives" href="#">'.$arcresult->year.'</a></div><div class="widget-accordion-body"><div class="widget-accordion-inner"><ul id="dnn_ctr433_Widget_year'.$arcresult->year.'" class="open">';
+            sprintf($year_text);
             if ($show_post_count)
                 $after = '&nbsp;(' . $arcresult->posts . ')' . $afterafter;
             $output .= ($arcresult->year != $temp_year) ? $year_text : '';
@@ -443,9 +446,10 @@ function wp_custom_archive($args = '')
             
             $temp_year = $arcresult->year;
         }
+        $output .= "</ul></div></div>";
     }
     
-    $output .= '</ul>';
+    $output .= '</div>';
     
     if ($echo)
         echo $output;

@@ -64,7 +64,19 @@
 											</div>
 										<?php
 											}
-										?>
+                                        ?>
+                                        <?php
+                                            $a_year = isset($_GET['year']) ? $_GET['year'] : 0;
+                                            $a_month = isset($_GET['month']) ? $_GET['month'] : 0;
+                                            if ( $a_year && $a_month ) {
+                                                
+                                        ?>
+                                            <div id="dnn_ctr430_MainView_ctl01_pnlArchives" class="blog-archives-header utils-alert utils-alert-info">
+                                                <h2><span>From monthly archives:</span> <?php echo get_the_date( 'F Y' ); ?></h2><p>We are pleased to present below all posts archived in '<?php echo get_the_date( 'F Y' ); ?>'. If you still can't find what you are looking for, try using the search box.</p>
+                                            </div>
+                                        <?php
+                                            }
+                                        ?>
                                         <div class="blog-content">
                                             <a name="Top"></a>
 												
@@ -88,7 +100,7 @@
 													</h2>
 													<div class="post-meta">
                                                     <i class="blogicon-calendar"></i>&nbsp; <?php the_date('d/m/Y H:i A'); ?> -
-													<i class="blogicon-user"></i>&nbsp; <a href="blog/authorid/1/superuser-account.html" rel="author"><?php echo get_the_author(); ?></a> -
+													<i class="blogicon-user"></i>&nbsp; <a href="#" rel="author"><?php echo get_the_author(); ?></a> -
 													<?php if ( count($categories) ) {
 														echo '<i class="blogicon-list"></i>&nbsp;';
 														$i = 0;

@@ -63,7 +63,7 @@ get_header(); ?>
                                             <h2 class="post-title"><?php the_title(); ?></h2>
                                             <div class="post-meta">
                                                 <i class="blogicon-calendar"></i>&nbsp; <?php the_date('d/m/Y H:i A'); ?> -
-                                                <i class="blogicon-user"></i>&nbsp; <a href="../../authorid/1/superuser-account.html" rel="author"><?php echo get_the_author(); ?></a> -
+                                                <i class="blogicon-user"></i>&nbsp; <a href="#" rel="author"><?php echo get_the_author(); ?></a> -
                                                 <?php if ( count($categories) ) {
 													echo '<i class="blogicon-list"></i>&nbsp;';
 													$i = 0;
